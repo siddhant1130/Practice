@@ -1,25 +1,26 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-int main()
+int main ()
 {
-	int a,b,i;
-	cin>>a>>b;
+    int n1,n2;
+    char op;
+    cout<<"Enter the value of the numbers: "<<endl;
+    cin>>n1>>n2;
+    cout<<"enter the operand"<<endl;
+    cin>>op;
 
-	for(int num=a;num<=b;num++)
-	{
-		int i;
-		for(i=2;i<num;i++)
-		{
-			if(num%i==0)
-			break;
-		}
-		if(i==num)
-        {
-            cout<<num<<endl;
-        }
-
-	}
-
-
+    switch (op)
+    {
+    case '+':
+        cout<<n1+n2<<endl;
+        break;
+        case '-':
+        cout<<n1-n2<<endl;
+        break;
+        default:
+        cout<<"another operand is inserted"<<endl;
+        break;
+    }
+    return 0;
 }
